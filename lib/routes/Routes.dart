@@ -11,6 +11,7 @@ final routes = {
   '/product': (context, {arguments}) => ProductPage(arguments: arguments)
 };
 // 路由配置固定写法
+// ignore: top_level_function_literal_block
 final onGenerateRoute = (RouteSettings settings) {
   final String name = settings.name;
   final Function pageContentBuilder = routes[name];
