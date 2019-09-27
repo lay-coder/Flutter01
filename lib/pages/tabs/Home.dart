@@ -18,7 +18,10 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('首页'),
+        title: Text(
+          '首页',
+          style: TextStyle(fontSize: 18.0),
+        ),
       ),
       body: Center(
         child: Column(

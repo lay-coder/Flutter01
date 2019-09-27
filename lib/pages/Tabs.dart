@@ -25,7 +25,7 @@ class _TabsState extends State<Tabs> {
             this._currenIndex = index;
           });
         },
-        iconSize: 30.0,
+        iconSize: 20.0,
         // fixedColor: Colors.blue, // 选中颜色
         type: BottomNavigationBarType.fixed, // 配置底部tabs可以有多个按钮,否则最多三个
         items: [
