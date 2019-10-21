@@ -11,7 +11,10 @@ class _SettingState extends State<Setting> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('设置'),
+        title: Text(
+          '设置',
+          style: TextStyle(fontSize: 18.0),
+        ),
       ),
       body: ListView(
         children: <Widget>[

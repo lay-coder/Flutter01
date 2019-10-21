@@ -12,7 +12,10 @@ class _CategoryPageState extends State<CategoryPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('分类'),
+          title: Text(
+            '分类',
+            style: TextStyle(fontSize: 18.0),
+          ),
         ),
         body: Center(
           child: Column(
