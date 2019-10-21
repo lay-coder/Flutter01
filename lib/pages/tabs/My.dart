@@ -21,8 +21,14 @@ class _MyPageState extends State<MyPage> {
             '我的',
             style: TextStyle(fontSize: 18.0),
           ),
-          leading: Icon(
-            Icons.menu,
+          leading: Builder(
+            builder: (BuildContext context) => IconButton(
+              icon: const Icon(Icons.menu),
+              onPressed: () {
+                print("openDrawer");
+                Scaffold.of(context).openDrawer();
+              },
+            ),
           ),
         ),
         body: Column(children: [
