@@ -1,10 +1,6 @@
-import 'package:flutter/foundation.dart';
+import 'package:flutter01/store/mySchedule.dart';
+import 'package:provider/provider.dart';
 
-class MySchedule with ChangeNotifier {
-  double _stateManagementTime = 0.1;
-  double get stateManagementTime => _stateManagementTime;
-  set stateManagementTime(double newValue) {
-    _stateManagementTime = newValue;
-    notifyListeners();
-  }
-}
+final List<SingleChildCloneableWidget> appStore = [
+  ChangeNotifierProvider(builder: (_) => MySchedule())
+];

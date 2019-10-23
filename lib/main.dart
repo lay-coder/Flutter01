@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: [Provider(MySchedule).value()],
+      providers: appStore,
       child: MaterialApp(
         // home: Tabs(),
         // routes: {

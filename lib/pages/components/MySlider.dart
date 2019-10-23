@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter01/store/index.dart';
+import 'package:flutter01/store/mySchedule.dart';
 
 class MySlider extends StatelessWidget {
   const MySlider({Key key}) : super(key: key);

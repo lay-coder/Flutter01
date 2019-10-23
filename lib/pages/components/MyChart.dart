@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter01/store/index.dart';
+import 'package:flutter01/store/mySchedule.dart';
 import 'package:pie_chart/pie_chart.dart';
 import 'package:provider/provider.dart';
 
