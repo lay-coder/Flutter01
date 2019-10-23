@@ -8,14 +8,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     final myCount = Provider.of<MyCount>(context);
@@ -31,7 +23,7 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             Text(
-              '$_counter',
+              '${myCount.count}',
               style: Theme.of(context).textTheme.display1,
             ),
             RaisedButton(
@@ -73,8 +65,7 @@ class _HomePageState extends State<HomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          _incrementCounter();
-          myCount.count = _counter;
+          myCount.count++;
         },
         tooltip: 'Increment',
         child: Icon(Icons.add),
