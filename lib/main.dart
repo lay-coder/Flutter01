@@ -3,6 +3,8 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter01/routes/Routes.dart' as routesConfig;
+import 'package:flutter01/store/index.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,14 +19,17 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      // home: Tabs(),
-      // routes: {
-      //   '/form': (context) => FormPage(),
-      //   '/setting': (context) => Setting(),
-      // },
-      initialRoute: '/',
-      onGenerateRoute: routesConfig.onGenerateRoute,
+    return MultiProvider(
+      providers: [Provider(MySchedule).value()],
+      child: MaterialApp(
+        // home: Tabs(),
+        // routes: {
+        //   '/form': (context) => FormPage(),
+        //   '/setting': (context) => Setting(),
+        // },
+        initialRoute: '/',
+        onGenerateRoute: routesConfig.onGenerateRoute,
+      ),
     );
   }
 }
