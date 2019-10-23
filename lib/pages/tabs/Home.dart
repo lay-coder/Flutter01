@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:flutter01/store/myCount.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -16,6 +18,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final myCount = Provider.of<MyCount>(context);
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -45,8 +48,7 @@ class _HomePageState extends State<HomePage> {
                 //       builder: (context) =>
                 //           SearchPage(arguments: {'id': this._counter}),
                 //     ));
-                Navigator.pushNamed(context, '/search',
-                    arguments: {'id': this._counter});
+                Navigator.pushNamed(context, '/search');
               },
               color: Theme.of(context).accentColor,
               textTheme: ButtonTextTheme.primary,
@@ -70,7 +72,10 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: () {
+          _incrementCounter();
+          myCount.count = _counter;
+        },
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ),
