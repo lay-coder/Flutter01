@@ -13,6 +13,7 @@ class MyChart extends StatelessWidget {
     dataMap.putIfAbsent("React", () => 3);
     dataMap.putIfAbsent("Xamarin", () => 2);
     dataMap.putIfAbsent("Ionic", () => 2);
+    dataMap['test'] = count.toDouble();
     return dataMap;
   }
 
@@ -25,6 +26,7 @@ class MyChart extends StatelessWidget {
       Colors.green,
       Colors.blue,
       Colors.yellow,
+      Colors.orange,
     ];
     return PieChart(
       dataMap: createData(mSchedule.stateManagementTime, myCount.count),
