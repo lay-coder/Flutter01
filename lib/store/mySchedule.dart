@@ -1,4 +1,4 @@
-import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 
 class MySchedule with ChangeNotifier {
   double _stateManagementTime = 0.1;
