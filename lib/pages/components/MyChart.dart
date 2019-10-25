@@ -8,12 +8,13 @@ class MyChart extends StatelessWidget {
   const MyChart({Key key}) : super(key: key);
 
   static createData(double val, int count) {
-    Map<String, double> _dataMap = new Map();
-    _dataMap.putIfAbsent("Flutter$count", () => val * 10);
-    _dataMap.putIfAbsent("React", () => 3);
-    _dataMap.putIfAbsent("Xamarin", () => 2);
-    _dataMap.putIfAbsent("Ionic", () => 2);
-    return _dataMap;
+    Map<String, double> dataMap = new Map();
+    dataMap.putIfAbsent("Flutter$count", () => val * 10);
+    dataMap.putIfAbsent("React", () => 3);
+    dataMap.putIfAbsent("Xamarin", () => 2);
+    dataMap.putIfAbsent("Ionic", () => 2);
+    dataMap['test'] = count.toDouble();
+    return dataMap;
   }
 
   static const List<Color> _colorList = [
