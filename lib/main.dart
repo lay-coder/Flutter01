@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'dart:io' show Platform;
 
-// import 'package:dio/dio.dart';
-// import 'package:flutter/foundation.dart';
+import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter01/routes/Routes.dart' as routesConfig;
@@ -10,17 +10,17 @@ import 'package:flutter01/store/index.dart';
 import 'package:provider/provider.dart';
 
 // // 必须是顶层函数
-// _parseAndDecode(String response) {
-//   return jsonDecode(response);
-// }
+_parseAndDecode(String response) {
+  return jsonDecode(response);
+}
 
-// parseJson(String text) {
-//   return compute(_parseAndDecode, text);
-// }
+parseJson(String text) {
+  return compute(_parseAndDecode, text);
+}
 
 void main() {
-  // var dio = Dio();
-  // (dio.transformer as DefaultTransformer).jsonDecodeCallback = parseJson;
+  var dio = Dio();
+  (dio.transformer as DefaultTransformer).jsonDecodeCallback = parseJson;
   runApp(MyApp());
   // 透明状态栏
   if (Platform.isAndroid) {
@@ -36,11 +36,6 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: appStore,
       child: MaterialApp(
-        // home: Tabs(),
-        // routes: {
-        //   '/form': (context) => FormPage(),
-        //   '/setting': (context) => Setting(),
-        // },
         initialRoute: '/',
         onGenerateRoute: routesConfig.onGenerateRoute,
       ),
