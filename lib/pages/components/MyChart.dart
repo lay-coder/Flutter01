@@ -26,16 +26,12 @@ class MyChart extends StatelessWidget {
     return Consumer<MySchedule>(
       builder: (context, schedule, _) => PieChart(
         dataMap: createData(schedule.stateManagementTime),
-        legendFontColor: Colors.blueGrey,
-        legendFontSize: 14.0,
-        legendFontWeight: FontWeight.w500,
         animationDuration: Duration(milliseconds: 800),
         chartLegendSpacing: 32.0,
         // chartRadius: MediaQuery.of(context).size.width / 2.5,
         showChartValuesInPercentage: true,
         showChartValues: true,
         showChartValuesOutside: false,
-        chartValuesColor: Colors.blueGrey[900].withOpacity(0.9),
         colorList: colorList,
         showLegends: true,
         decimalPlaces: 1,
